@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Wipeey</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Wipeey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 by Wipeey o_o</copyright>
+    <lastBuildDate>Fri, 08 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to my blog!</title>
+      <link>http://localhost:1313/posts/presentation/</link>
+      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/presentation/</guid>
+      <description>A warm welcome to my corner of the internet! Join me as I share my CTF writeups, cybersecurity articles, and any other stuff that I&amp;rsquo;d like to share.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
