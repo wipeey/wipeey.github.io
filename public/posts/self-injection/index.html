@@ -104,7 +104,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1500"
+    "wordCount": "1501"
   }]
   </script>
 
@@ -462,7 +462,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-11-14T00:00:00&#43;00:00">14 November 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1500 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+  <time datetime="2024-11-14T00:00:00&#43;00:00">14 November 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1501 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
   
 
   
@@ -945,7 +945,7 @@ Don&rsquo;t worry for the shellcode part as we will generate it using the wonder
     
 </h3>
 <p>Bingo! Our code should already be working :)</p>
-<p>Well&hellip; We still to fix two or three things. First of all, we should tell our program to wait for the thread to be terminated before exiting. Then, we need to close the handle to our thread and free the memory we allocated!</p>
+<p>Well&hellip; We still need to fix two or three things. First of all, we should tell our program to wait for the thread to be terminated before exiting. Then, we need to close the handle to our thread and free the memory we allocated!</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="c1">// Infinite loop until the program isn&#39;t closed
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">WaitForSingleObject</span><span class="p">(</span><span class="n">hThread</span><span class="p">,</span> <span class="n">INFINITE</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
