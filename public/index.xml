@@ -6,8 +6,18 @@
     <description>Recent content on Wipeey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 by Wipeey o_o</copyright>
-    <lastBuildDate>Fri, 08 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 by Wipeey 🎭</copyright>
+    <lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Fileless Malware</title>
+      <link>http://localhost:1313/posts/self-injection/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/self-injection/</guid>
+      <description>A hands-on guide to understanding and developing malware self-injection techniques.</description>
+      
+    </item>
+    
     <item>
       <title>Welcome to my blog!</title>
       <link>http://localhost:1313/posts/presentation/</link>

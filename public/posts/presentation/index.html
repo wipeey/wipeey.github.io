@@ -104,7 +104,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "301"
+    "wordCount": "292"
   }]
   </script>
 
@@ -462,7 +462,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-11-08T00:00:00&#43;00:00">8 November 2024</time><span class="px-2 text-primary-500">&middot;</span><span>301 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+  <time datetime="2024-11-08T00:00:00&#43;00:00">8 November 2024</time><span class="px-2 text-primary-500">&middot;</span><span>292 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
   
 
   
@@ -576,7 +576,121 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#who-am-i">Who Am I?</a>
+      <ul>
+        <li><a href="#what-to-expect">What to Expect</a></li>
+        <li><a href="#my-digital-toolbox-">My Digital Toolbox 🧰</a></li>
+      </ul>
+    </li>
+    <li><a href="#looking-ahead">Looking Ahead</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#who-am-i">Who Am I?</a>
+      <ul>
+        <li><a href="#what-to-expect">What to Expect</a></li>
+        <li><a href="#my-digital-toolbox-">My Digital Toolbox 🧰</a></li>
+      </ul>
+    </li>
+    <li><a href="#looking-ahead">Looking Ahead</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -601,7 +715,7 @@
 <p>I&rsquo;m a cybersecurity enthusiast on a mission to continuously improve and expand my knowledge across various domains. You&rsquo;ll often find me honing my skills on platforms like TryHackMe and RootMe, always striving to push beyond my comfort zone and avoid the dreaded &ldquo;tutorial hell.&rdquo;</p>
 
 
-<h2 class="relative group">What to Expect 
+<h3 class="relative group">What to Expect 
     <div id="what-to-expect" class="anchor"></div>
     
     <span
@@ -610,63 +724,19 @@
             style="text-decoration-line: none !important;" href="#what-to-expect" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
+</h3>
 <p>This blog will be a melting pot of content, including:</p>
+<p><strong>CTF Writeups:</strong>
+Detailed walkthroughs of challenges I&rsquo;ve tackled, sharing both my successes and the valuable lessons learned from failures.</p>
+<p><strong>Cybersecurity Articles:</strong>
+In-depth explorations of various topics, from emerging threats to innovative defense strategies.</p>
+<p><strong>Coding Adventures:</strong>
+As I continue to sharpen my skills, I&rsquo;ll be sharing interesting projects and scripts I&rsquo;m working on.</p>
+<p><strong>Tool Reviews:</strong>
+Insights into the cybersecurity tools I&rsquo;m exploring (especially in OSINT🔎).</p>
 
 
-<h4 class="relative group">CTF Writeups: 
-    <div id="ctf-writeups" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#ctf-writeups" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>Detailed walkthroughs of challenges I&rsquo;ve tackled, sharing both my successes and the valuable lessons learned from failures.</p>
-
-
-<h4 class="relative group">Cybersecurity Articles: 
-    <div id="cybersecurity-articles" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#cybersecurity-articles" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>In-depth explorations of various topics, from emerging threats to innovative defense strategies.</p>
-
-
-<h4 class="relative group">Coding Adventures: 
-    <div id="coding-adventures" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#coding-adventures" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>As I continue to sharpen my skills, I&rsquo;ll be sharing interesting projects and scripts I&rsquo;m working on.</p>
-
-
-<h4 class="relative group">Tool Reviews: 
-    <div id="tool-reviews" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#tool-reviews" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>Insights into the cybersecurity tools I&rsquo;m exploring (especially in OSINT🔎).</p>
-
-
-<h2 class="relative group">My Digital Toolbox 🧰 
+<h3 class="relative group">My Digital Toolbox 🧰 
     <div id="my-digital-toolbox-" class="anchor"></div>
     
     <span
@@ -675,74 +745,16 @@
             style="text-decoration-line: none !important;" href="#my-digital-toolbox-" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
+</h3>
 <p>Currently, my arsenal includes:</p>
-
-
-<h4 class="relative group">Languages: 
-    <div id="languages" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#languages" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>C++, Java, Python</p>
-
-
-<h4 class="relative group">Operating Systems: 
-    <div id="operating-systems" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#operating-systems" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>Linux, Windows Client/Server</p>
-
-
-<h4 class="relative group">Databases: 
-    <div id="databases" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#databases" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>MySQL, NoSQL</p>
-
-
-<h4 class="relative group">Scripting: 
-    <div id="scripting" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#scripting" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>Bash, VBS, Powershell</p>
-
-
-<h4 class="relative group">Networking: 
-    <div id="networking" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#networking" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>Various tools and protocols</p>
-<p>I&rsquo;m constantly adding to this list, so expect to see it grow as we progress together!</p>
+<ul>
+<li><strong>Languages:</strong> C++, Java, Python</li>
+<li><strong>Operating Systems:</strong> Linux, Windows Client/Server</li>
+<li><strong>Databases:</strong> MySQL, NoSQL</li>
+<li><strong>Scripting:</strong> Bash, VBS, Powershell</li>
+<li><strong>Networking:</strong> Various tools and protocols</li>
+</ul>
+<p>I&rsquo;m constantly adding to this list, so expect to see it grow as I progress! :p</p>
 
 
 <h2 class="relative group">Looking Ahead 
@@ -793,6 +805,43 @@ Stay tuned for upcoming posts, and don&rsquo;t hesitate to reach out if you have
 
     
   
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/self-injection/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Introduction to Fileless Malware</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-11-14T00:00:00&#43;00:00">14 November 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
 
 
     
@@ -816,7 +865,7 @@ Stay tuned for upcoming posts, and don&rsquo;t hesitate to reach out if you have
     
     
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
-      © 2024 by Wipeey o_o
+      © 2024 by Wipeey 🎭
     </p>
     
 
