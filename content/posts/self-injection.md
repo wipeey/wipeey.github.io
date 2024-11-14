@@ -152,7 +152,7 @@ HANDLE hThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)mem_alloc, NULL, 
 
 Bingo! Our code should already be working :)
 
-Well... We still to fix two or three things. First of all, we should tell our program to wait for the thread to be terminated before exiting. Then, we need to close the handle to our thread and free the memory we allocated!
+Well... We still need to fix two or three things. First of all, we should tell our program to wait for the thread to be terminated before exiting. Then, we need to close the handle to our thread and free the memory we allocated!
 
 ```C++
 // Infinite loop until the program isn't closed
