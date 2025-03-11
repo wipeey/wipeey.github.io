@@ -2,6 +2,8 @@
 title: "Introduction to Fileless Malware"
 date: 2024-11-14
 summary: "A hands-on guide to understanding and developing malware self-injection techniques."
+categories: ['Tutorials']
+tags: ['Malware', 'C++']
 ---
 
 Ever heard of the word *malware*?
